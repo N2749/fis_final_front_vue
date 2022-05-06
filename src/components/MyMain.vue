@@ -1,5 +1,5 @@
 <template>
-  <div class="header-wrapper">
+  <main class="main">
     <div class="container">
       <header class="header">
         <div class="header__logo">
@@ -32,7 +32,7 @@
         </nav>
       </header>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -40,10 +40,9 @@ export default {};
 </script>
 
 <style>
-.header-wrapper {
-  width: 100%;
-  grid-area: header;
-  background-color: #04bf68;
+.main {
+  grid-area: main;
+  height: 500px;
 }
 
 .container {
@@ -53,7 +52,6 @@ export default {};
 
 .header {
   width: 100%;
-  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
