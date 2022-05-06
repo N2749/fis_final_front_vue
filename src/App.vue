@@ -1,13 +1,13 @@
 <template></template>
 
+<template>
+  <MyHeader></MyHeader>
+</template>
+
 <script setup>
-export default {
-  data() {
-    return {
-      likes: 0,
-    };
-  },
-};
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import MyHeader from './components/MyHeader.vue';
 </script>
 
 <style></style>
