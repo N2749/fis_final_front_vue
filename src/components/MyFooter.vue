@@ -161,44 +161,32 @@ export default {};
 <style>
 .footer {
   color: white;
-
   grid-area: footer;
-
   background-color: #232426;
-
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
-
   align-items: center;
-
   padding: 20px 0;
 }
 
 .footer__container {
   width: 100%;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   gap: 50px 0;
 }
 
 .layout-4-column {
   width: 90%;
-
+  max-width: 1200px;
   display: flex;
-
   justify-content: space-between;
 }
 
 .layout-4-column > div {
-  flex-basis: 24%;
+  flex-basis: 23%;
 }
 
 .footer__about {
@@ -247,13 +235,11 @@ export default {};
 
 .copyright {
   text-align: center;
-
   margin: 0;
 }
 
 .icons {
   display: flex;
-
   gap: 0 20px;
 }
 </style>

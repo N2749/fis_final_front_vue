@@ -1,37 +1,6 @@
 <template>
   <main class="main">
-    <div class="container">
-      <header class="header">
-        <div class="header__logo">
-          <a href="#">
-            <img class="logo12" src="../assets/bus.png" />
-          </a>
-          <span class="header__text">Bus Tickets Kz</span>
-        </div>
-        <nav header-top__navigation>
-          <ul class="nav nav-info">
-            <li class="nav-item">
-              <a href="#" class="nav-link link-light">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link link-light">Schedule</a>
-            </li>
-            <li class="nav-item">
-              <a href="tracking.html" class="nav-link link-light">Tracking</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link link-light">Help</a>
-            </li>
-            <li class="nav-item">
-              <a href="profile.html" class="nav-link link-light">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link link-light">Log out</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </div>
+    <div class="container"></div>
   </main>
 </template>
 

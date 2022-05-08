@@ -49,9 +49,12 @@ export default {};
 .container {
   max-width: 1200px;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .header {
+  max-width: 1200px;
   width: 100%;
   height: 70px;
   display: flex;
