@@ -9,24 +9,24 @@
           <span class="header__text">Bus Tickets Kz</span>
         </div>
         <nav header-top__navigation>
-          <ul class="nav nav-info">
-            <li class="nav-item">
-              <a href="#" class="nav-link link-light">Home</a>
+          <ul class="navigation">
+            <li class="navigation__item">
+              <a href="#" class="nav__link">Home</a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link link-light">Schedule</a>
+            <li class="navigation__item">
+              <a href="#" class="nav__link">Schedule</a>
             </li>
-            <li class="nav-item">
-              <a href="tracking.html" class="nav-link link-light">Tracking</a>
+            <li class="navigation__item">
+              <a href="tracking.html" class="nav__link">Tracking</a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link link-light">Help</a>
+            <li class="navigation__item">
+              <a href="#" class="nav__link">Help</a>
             </li>
-            <li class="nav-item">
-              <a href="profile.html" class="nav-link link-light">Profile</a>
+            <li class="navigation__item">
+              <a href="profile.html" class="nav__link">Profile</a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link link-light">Log out</a>
+            <li class="navigation__item">
+              <a href="#" class="nav__link">Log out</a>
             </li>
           </ul>
         </nav>
@@ -67,17 +67,33 @@ export default {};
 
 .header__text {
   color: #f8f9fa;
+  font-size: 20px;
 }
 
 .logo12 {
   width: 40px;
 }
 
-.nav-link {
-  transition: underline 0.4s ease 0s;
+.navigation {
+  display: flex;
+  gap: 0 20px;
+  padding: 0;
+  align-items: center;
+  margin: 0;
 }
 
-.nav-link:hover {
-  text-decoration: underline;
+.navigation__item {
+  list-style: none;
+}
+
+.nav__link {
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease 0s;
+}
+
+.nav__link:hover {
+  color: #f2f2f2;
 }
 </style>
