@@ -8,6 +8,9 @@
         <MyTicketForm :stations="stations"></MyTicketForm>
       </div>
     </section>
+    <section class="list">
+      <my-tickets-list></my-tickets-list>
+    </section>
   </main>
 </template>
 

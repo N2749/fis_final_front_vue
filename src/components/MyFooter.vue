@@ -162,7 +162,7 @@ export default {};
 .footer {
   color: white;
   grid-area: footer;
-  background-color: #232426;
+  background-color: #3c5956;
   display: flex;
   flex-direction: column;
   justify-content: center;
