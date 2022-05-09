@@ -15,7 +15,7 @@
         <div class="footer__links">
           <h4 class="footer__title">main links</h4>
 
-          <ul class="list">
+          <ul class="footer__list">
             <li class="list__item"><a href="#" class="list__link">Home</a></li>
 
             <li class="list__item">
@@ -33,7 +33,7 @@
         <div class="footer__questions">
           <h4 class="footer__title">questions</h4>
 
-          <ul class="list">
+          <ul class="footer__list">
             <li class="list__item">
               <a href="#" class="list__link">How to buy</a>
             </li>
@@ -55,7 +55,7 @@
         <div class="footer__contact">
           <h4 class="footer__title">contact</h4>
 
-          <ul class="list">
+          <ul class="footer__list">
             <li class="list__item">
               <span class="contact__info">Company: Happy Angel</span>
             </li>
@@ -201,7 +201,7 @@ export default {};
   margin-bottom: 15px;
 }
 
-.list {
+.footer__list {
   padding: 0;
 
   display: flex;

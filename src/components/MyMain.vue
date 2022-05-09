@@ -109,16 +109,17 @@
         </form>
       </div>
     </section>
-    <section class="list">
-      <my-tickets-list></my-tickets-list>
+    <section class="features">
+      <MyFeatures></MyFeatures>
     </section>
   </main>
 </template>
 
 <script>
+import MyFeatures from './MyFeatures.vue';
 import MyTicketsList from './MyTicketsList.vue';
 export default {
-  components: { MyTicketsList },
+  components: { MyTicketsList, MyFeatures },
 };
 </script>
 
