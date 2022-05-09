@@ -10,7 +10,7 @@
               class="ticket-buy-form__select"
               name="departure-point"
               id="departure-point"
-              v-bind:value="departurePoint"
+              :value="departurePoint"
               @input="departurePoint=$event.target.value"
           >
             <option value="">Select a location...</option>
@@ -27,7 +27,7 @@
               class="ticket-buy-form__select"
               name="arrival-point"
               id="arrival-point"
-              v-bind:value="destinationPoint"
+              :value="destinationPoint"
               @input="destinationPoint=$event.target.value"
           >
             <option value="">Select a location...</option>
@@ -43,7 +43,7 @@
           <input type="date"
                  class="ticket-buy-form__input"
                  id="date"
-                 v-bind:value="departureDate"
+                 :value="departureDate"
                  @input="departureDate=$event.target.value"
           />
         </div>
@@ -65,21 +65,17 @@ export default {
   },
   data() {
     return {
-      departurePoint: "",
-      destinationPoint: "",
-      departureDate: "",
+      ticketProperties: {
+        departurePoint: "",
+        destinationPoint: "",
+        departureDate: "",
+      }
     }
   },
-
   methods: {
     createTicketQuery() {
-      const newTicketQuery = {
-        id : Date.now(),
-        departurePoint: this.departurePoint,
-        destinationPoint: this.destinationPoint,
-        departureDate: this.departureDate
-      };
-      alert(newTicketQuery);
+      this.ticketProperties.id = Date.now();
+      this.$emit("createTicketQuery", this.ticketProperties);
     }
   }
 }
