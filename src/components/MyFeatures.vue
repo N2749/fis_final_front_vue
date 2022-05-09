@@ -36,6 +36,7 @@ export default {};
   align-items: center;
   justify-content: space-around;
   padding: 100px;
+  background-color: white;
 }
 
 .features__feature {

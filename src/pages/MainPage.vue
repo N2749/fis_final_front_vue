@@ -13,6 +13,8 @@
           ></MyTicketForm>
         </div>
       </section>
+      <MyFeatures></MyFeatures>
+      <my-buses-type></my-buses-type>
     </main>
     <MyFooter></MyFooter>
   </div>
@@ -23,12 +25,16 @@ import MyHeader from '/src/components/MyHeader.vue';
 import MyFooter from '/src/components/MyFooter.vue';
 import MyTicketForm from '/src/components/MyTicketForm.vue';
 import MyTicketsList from '/src/components/MyTicketsList.vue';
+import MyFeatures from '/src/components/MyFeatures.vue';
+import MyBusesType from '/src/components/my-buses-type.vue';
 export default {
   components: {
     MyHeader,
     MyFooter,
     MyTicketForm,
     MyTicketsList,
+    MyFeatures,
+    MyBusesType,
   },
   data() {
     return {
@@ -105,17 +111,20 @@ export default {
     'main'
     'footer';
 }
-main {
-  background-color: #8ebfb1;
-}
+
 .buy-ticket {
   width: 100%;
   background-color: #8ebfb1;
   padding: 50px;
 }
+
 .buy-ticket__container {
   flex-direction: column;
   align-items: center;
   gap: 30px 0;
+}
+
+.buy-ticket__title {
+  color: white;
 }
 </style>
