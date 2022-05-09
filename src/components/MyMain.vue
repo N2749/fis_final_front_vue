@@ -5,11 +5,16 @@
         <h1 class="buy-ticket__title section-title">
           Go wherever you need to go
         </h1>
-        <MyTicketForm :stations="stations"></MyTicketForm>
+        <MyTicketForm :stations="stations" @createTicketQuery="showListOfTickets"></MyTicketForm>
       </div>
     </section>
+<<<<<<< HEAD
     <section class="features">
       <MyFeatures></MyFeatures>
+=======
+    <section class="list">
+      <MyTicketsList :ticket-properties="ticketProperties"></MyTicketsList>
+>>>>>>> 7a8fa046977697d5d05c87fe470e09ba2fbc0b71
     </section>
   </main>
 </template>
@@ -23,11 +28,17 @@ export default {
 =======
 import MyTicketForm from "./MyTicketForm.vue";
 import TicketList from "./TicketList.vue";
+import MyTicketsList from "./MyTicketsList.vue";
 
 export default {
-  components: {TicketList, MyTicketForm},
+  components: {TicketList, MyTicketForm, MyTicketsList},
   data() {
     return {
+      ticketProperties: {
+        departurePoint: "",
+        destinationPoint: "",
+        departureDate: ""
+      },
       stations: [
         {
           name: "Taraz",
@@ -71,6 +82,11 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    showListOfTickets(ticketProperties) {
+      console.log(ticketProperties.target.value)
+    }
   }
 >>>>>>> f41d4555758966e1f1e88b843b8091c4aa709018
 };
@@ -78,6 +94,10 @@ export default {
 </script>
 
 <style>
+
+main {
+  background-color: #8ebfb1;
+}
 
 .buy-ticket {
   width: 100%;

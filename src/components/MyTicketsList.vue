@@ -1,5 +1,6 @@
 <template>
   <div class="tickets-list">
+    <h3>Tickets from {{ticketProperties.departurePoint}} to {{ticketProperties.destinationPoint}} on date {{ticketProperties.date}}</h3>
     <div class="filter">
       <h2 class="filter__title">Sort by</h2>
       <select class="filter__select" name="filter" id="filter">
@@ -58,7 +59,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    ticketProperties: {
+      required: true,
+    }
+  }
+};
 </script>
 
 <style>
