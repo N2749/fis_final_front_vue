@@ -10,11 +10,10 @@
               class="ticket-buy-form__select"
               name="departure-point"
               id="departure-point"
-              :value="departurePoint"
-              @input="departurePoint=$event.target.value"
+              v-model="ticketProperties.departurePoint"
           >
             <option value="">Select a location...</option>
-            <option v-for="station in stations" :value="station.name">
+            <option v-for="station in stations" :value="station.name" :key="station.id">
               {{ station.name }}
             </option>
           </select>
@@ -27,11 +26,10 @@
               class="ticket-buy-form__select"
               name="arrival-point"
               id="arrival-point"
-              :value="destinationPoint"
-              @input="destinationPoint=$event.target.value"
+              v-model="ticketProperties.destinationPoint"
           >
             <option value="">Select a location...</option>
-            <option v-for="station in stations" :value="station.name">
+            <option v-for="station in stations" :value="station.name" :key="station.id">
               {{ station.name }}
             </option>
           </select>
@@ -43,8 +41,7 @@
           <input type="date"
                  class="ticket-buy-form__input"
                  id="date"
-                 :value="departureDate"
-                 @input="departureDate=$event.target.value"
+                 v-model="ticketProperties.departureDate"
           />
         </div>
       </div>
