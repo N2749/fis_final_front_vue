@@ -3,15 +3,15 @@
     <div class="container">
       <header class="header">
         <div class="header__logo">
-          <a href="#">
+          <a href="/">
             <img class="logo12" src="../assets/bus.png" alt="logo"/>
+            <span class="header__text">Bus Tickets Kz</span>
           </a>
-          <span class="header__text">Bus Tickets Kz</span>
         </div>
         <nav class="header-top__navigation">
           <ul class="navigation">
             <li class="navigation__item">
-              <a href="#" class="nav__link">Home</a>
+              <a href="/" class="nav__link">Home</a>
             </li>
             <li class="navigation__item">
               <a href="#" class="nav__link">Schedule</a>
@@ -44,6 +44,10 @@ export default {};
   width: 100%;
   grid-area: header;
   background-color: #3c5956;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
