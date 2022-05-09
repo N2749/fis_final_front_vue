@@ -1,6 +1,8 @@
 <template>
-  <div class="tickets-list">
-    <h3>Tickets from {{ticketProperties.departurePoint}} to {{ticketProperties.destinationPoint}} on date {{ticketProperties.date}}</h3>
+  <div>
+    <h3>Tickets from {{ticketProperties.departurePoint}} to {{ticketProperties.destinationPoint}} on date {{ticketProperties.departureDate}}</h3>
+    <div class="tickets-list">
+    <br>
     <div class="filter">
       <h2 class="filter__title">Sort by</h2>
       <select class="filter__select" name="filter" id="filter">
@@ -55,6 +57,7 @@
         </li>
       </ul>
     </div>
+  </div>
   </div>
 </template>
 

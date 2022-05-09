@@ -1,41 +1,35 @@
 <template>
-  <main class="main">
-    <section class="buy-ticket">
-      <div class="container buy-ticket__container">
-        <h1 class="buy-ticket__title section-title">
-          Go wherever you need to go
-        </h1>
-        <MyTicketForm
-          :stations="stations"
-          @createTicketQuery="showListOfTickets"
-        ></MyTicketForm>
-      </div>
-    </section>
-<<<<<<< HEAD
-    <MyFeatures></MyFeatures>
-=======
-    <section class="list">
-      <MyTicketsList :ticket-properties="ticketProperties"></MyTicketsList>
-    </section>
->>>>>>> master
-  </main>
+  <div class="wrapper">
+    <MyHeader></MyHeader>
+    <main class="main">
+      <section class="buy-ticket">
+        <div class="container buy-ticket__container">
+          <h1 class="buy-ticket__title section-title">
+            Go wherever you need to go
+          </h1>
+          <MyTicketForm
+            :stations="stations"
+            @createTicketQuery="updateTicketProperties"
+          ></MyTicketForm>
+        </div>
+      </section>
+    </main>
+    <MyFooter></MyFooter>
+  </div>
 </template>
 
 <script>
-import MyTicketForm from './MyTicketForm.vue';
-<<<<<<< HEAD
-import MyTicketsList from './MyTicketsList.vue';
-import MyFeatures from './MyFeatures.vue';
-
+import MyHeader from '/src/components/MyHeader.vue';
+import MyFooter from '/src/components/MyFooter.vue';
+import MyTicketForm from '/src/components/MyTicketForm.vue';
+import MyTicketsList from '/src/components/MyTicketsList.vue';
 export default {
-  components: { TicketList, MyTicketForm, MyTicketsList, MyFeatures },
-=======
-import TicketList from './TicketList.vue';
-import MyTicketsList from './MyTicketsList.vue';
-
-export default {
-  components: { TicketList, MyTicketForm, MyTicketsList },
->>>>>>> master
+  components: {
+    MyHeader,
+    MyFooter,
+    MyTicketForm,
+    MyTicketsList,
+  },
   data() {
     return {
       ticketProperties: {
@@ -88,24 +82,37 @@ export default {
     };
   },
   methods: {
-    showListOfTickets(ticketProperties) {
-      console.log(ticketProperties.target.value);
+    updateTicketProperties(ticketProperties) {
+      this.ticketProperties = ticketProperties;
+      localStorage.setItem(
+        'ticketProperties',
+        JSON.stringify(ticketProperties)
+      );
+      console.log(ticketProperties);
+      window.location.href = '/tickets';
     },
   },
 };
 </script>
 
 <style>
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template: minmax(70px, auto) 1fr minmax(350px, auto) / 1fr;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+}
 main {
   background-color: #8ebfb1;
 }
-
 .buy-ticket {
   width: 100%;
   background-color: #8ebfb1;
   padding: 50px;
 }
-
 .buy-ticket__container {
   flex-direction: column;
   align-items: center;
