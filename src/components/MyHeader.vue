@@ -4,11 +4,11 @@
       <header class="header">
         <div class="header__logo">
           <a href="#">
-            <img class="logo12" src="../assets/bus.png" />
+            <img class="logo12" src="../assets/bus.png" alt="logo"/>
           </a>
           <span class="header__text">Bus Tickets Kz</span>
         </div>
-        <nav header-top__navigation>
+        <nav class="header-top__navigation">
           <ul class="navigation">
             <li class="navigation__item">
               <a href="#" class="nav__link">Home</a>
