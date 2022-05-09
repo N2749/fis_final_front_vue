@@ -109,16 +109,22 @@
         </form>
       </div>
     </section>
+    <section class="list">
+      <my-tickets-list></my-tickets-list>
+    </section>
   </main>
 </template>
 
 <script>
-export default {};
+import MyTicketsList from './MyTicketsList.vue';
+export default {
+  components: { MyTicketsList },
+};
 </script>
 
 <style>
-.buy-ticket {
-  width: 100%;
+.buy-ticket,
+.list {
   background-color: #8ebfb1;
   padding: 50px;
 }

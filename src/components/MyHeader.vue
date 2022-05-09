@@ -43,7 +43,7 @@ export default {};
 .header-wrapper {
   width: 100%;
   grid-area: header;
-  background-color: #04bf68;
+  background-color: #3c5956;
 }
 
 .container {
