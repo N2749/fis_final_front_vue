@@ -89,7 +89,7 @@ export default {
 .ticket-buy-form {
   background-color: white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   box-shadow: 4px 2px 10px 2px rgba(38, 62, 80, 0.16);
@@ -106,6 +106,7 @@ export default {
   display: flex;
   gap: 30px 30px;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -119,6 +120,7 @@ export default {
   font-size: 18px;
   text-transform: uppercase;
   color: #3c5956;
+  text-align: center;
 }
 
 .ticket-buy-form__button {
@@ -136,7 +138,7 @@ export default {
 }
 
 .ticket-buy-form__select {
-  width: 300px;
+  width: 100%;
   height: 40px;
   border: none;
   border-radius: 5px;
