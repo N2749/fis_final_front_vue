@@ -22,11 +22,12 @@
             <li class="navigation__item">
               <a href="#" class="nav__link">Help</a>
             </li>
-            <li class="navigation__item">
-              <a href="profile.html" class="nav__link">Profile</a>
+            <li v-if="authenticated()" class="navigation__item">
+              <a href="/profile" class="nav__link">Profile</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="nav__link">Log out</a>
+              <a v-if="authenticated()" href="/" @click="logOut()" class="nav__link">Log out</a>
+              <a v-else href="/login" class="nav__link">Log in</a>
             </li>
           </ul>
         </nav>
@@ -36,7 +37,17 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    authenticated () {
+      return JSON.parse(localStorage.getItem("authenticated")) || false;
+    },
+    logOut () {
+      localStorage.setItem("authenticated", JSON.stringify(false));
+      localStorage.setItem("currentCustomer", null);
+    }
+  }
+};
 </script>
 
 <style>
