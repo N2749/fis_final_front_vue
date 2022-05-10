@@ -18,10 +18,10 @@
 <script>
 import MyHeader from '/src/components/MyHeader.vue';
 import MyFooter from '/src/components/MyFooter.vue';
-import MyTicketList from '/src/components/MyTicketsList.vue';
+import MyTicketsList from '/src/components/MyTicketsList.vue';
 
 export default {
-  components: { MyHeader, MyFooter, MyTicketList },
+  components: { MyHeader, MyFooter, MyTicketsList },
   data() {
     return {
       ticketProperties: JSON.parse(
@@ -39,6 +39,10 @@ export default {
 <style scoped>
 .profile-main {
   padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px 0;
 }
 
 .profile-info {

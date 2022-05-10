@@ -1,16 +1,15 @@
 <template>
   <div class="wrapper">
-    <MyHeader></MyHeader>
+    <my-header></my-header>
     <main>
       <h3>
         Tickets from {{ ticketProperties.departurePoint }} to
         {{ ticketProperties.destinationPoint }} on date
         {{ ticketProperties.departureDate }}
       </h3>
-
       <MyTicketsList :ticket-properties="ticketProperties"></MyTicketsList>
     </main>
-    <MyFooter></MyFooter>
+    <my-footer></my-footer>
   </div>
 </template>
 
