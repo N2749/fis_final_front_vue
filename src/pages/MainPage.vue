@@ -20,6 +20,7 @@ import MyHeader from '/src/components/MyHeader.vue';
 import MyFooter from '/src/components/MyFooter.vue';
 import MyTicketForm from "/src/components/MyTicketForm.vue";
 import MyTicketsList from "/src/components/MyTicketsList.vue";
+import stationDataService from "../services/stationDataService";
 export default {
   components: {
     MyHeader,
@@ -79,14 +80,26 @@ export default {
     }
   },
   methods: {
+    retrieveStations() {
+      stationDataService.getAll()
+          .then((response) => {
+            this.stations = response.data;
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+    },
     updateTicketProperties(ticketProperties) {
       this.ticketProperties = ticketProperties;
       localStorage.setItem("ticketProperties", JSON.stringify(ticketProperties));
       console.log(ticketProperties)
       window.location.href = "/tickets";
-    }
-  }
-}
+    },
+  },
+  mounted() {
+    this.retrieveStations();
+  },
+};
 </script>
 
 <style>
