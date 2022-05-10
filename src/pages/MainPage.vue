@@ -14,7 +14,7 @@
         </div>
       </section>
       <MyFeatures></MyFeatures>
-      <my-buses-type></my-buses-type>
+      <MyBusesType></MyBusesType>
       <MyPopularAreas></MyPopularAreas>
     </main>
     <MyFooter></MyFooter>
@@ -25,14 +25,11 @@
 import MyHeader from '/src/components/MyHeader.vue';
 import MyFooter from '/src/components/MyFooter.vue';
 import MyTicketForm from '/src/components/MyTicketForm.vue';
-import MyTicketsList from '/src/components/MyTicketsList.vue';
-<<<<<<< HEAD
 import MyFeatures from '/src/components/MyFeatures.vue';
-import MyBusesType from '/src/components/my-buses-type.vue';
+import MyBusesType from '/src/components/MyBusesType.vue';
+import MyTicketsList from '/src/components/MyTicketsList.vue';
 import MyPopularAreas from '/src/components/MyPopularAreas.vue';
-=======
-import stationDataService from '../services/stationDataService';
->>>>>>> master
+import stationDataService from '/src/services/stationDataService';
 export default {
   components: {
     MyHeader,
