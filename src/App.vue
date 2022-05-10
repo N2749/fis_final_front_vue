@@ -4,7 +4,9 @@
   </div>
 </template>
 
-<script setup>
+<script>
+export default {
+}
 </script>
 
 <style>

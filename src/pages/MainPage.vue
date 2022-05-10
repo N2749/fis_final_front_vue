@@ -26,9 +26,13 @@ import MyHeader from '/src/components/MyHeader.vue';
 import MyFooter from '/src/components/MyFooter.vue';
 import MyTicketForm from '/src/components/MyTicketForm.vue';
 import MyTicketsList from '/src/components/MyTicketsList.vue';
+<<<<<<< HEAD
 import MyFeatures from '/src/components/MyFeatures.vue';
 import MyBusesType from '/src/components/my-buses-type.vue';
 import MyPopularAreas from '/src/components/MyPopularAreas.vue';
+=======
+import stationDataService from '../services/stationDataService';
+>>>>>>> master
 export default {
   components: {
     MyHeader,
@@ -91,6 +95,16 @@ export default {
     };
   },
   methods: {
+    retrieveStations() {
+      stationDataService
+        .getAll()
+        .then((response) => {
+          this.stations = response.data;
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
     updateTicketProperties(ticketProperties) {
       this.ticketProperties = ticketProperties;
       localStorage.setItem(
@@ -100,6 +114,9 @@ export default {
       console.log(ticketProperties);
       window.location.href = '/tickets';
     },
+  },
+  mounted() {
+    this.retrieveStations();
   },
 };
 </script>

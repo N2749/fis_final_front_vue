@@ -13,12 +13,17 @@
             v-model="ticketProperties.departurePoint"
           >
             <option value="">Select a location...</option>
+<<<<<<< HEAD
             <option
               v-for="station in stations"
               :value="station.name"
               :key="station.id"
             >
               {{ station.name }}
+=======
+            <option v-for="station in stations" :value="station.location" :key="station.id">
+              {{ station.location }}
+>>>>>>> master
             </option>
           </select>
         </div>
@@ -31,12 +36,17 @@
             v-model="ticketProperties.destinationPoint"
           >
             <option value="">Select a location...</option>
+<<<<<<< HEAD
             <option
               v-for="station in stations"
               :value="station.name"
               :key="station.id"
             >
               {{ station.name }}
+=======
+            <option v-for="station in stations" :value="station.location" :key="station.id">
+              {{ station.location }}
+>>>>>>> master
             </option>
           </select>
         </div>
