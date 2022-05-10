@@ -2,18 +2,27 @@
   <div class="ticket">
     <div class="ticket-img">
       <div class="img"></div>
-      <span class="ticket__number">#200302202</span>
+      <span class="ticket__number">{{ ticket.id }}</span>
     </div>
     <div class="ticket-info">
-      <div class="ticket-info__date">{{departureDate}}</div>
-      <h2 class="ticket-info__from-destination">From {{departurePoint}}</h2>
-      <h3 class="ticket-info__to-destination">To {{destinationPoint}}</h3>
-      <span class="station">Station {{station}}</span>
-      <span class="ticket-info__time">Time {{departureTime}}</span>
-      <span class="ticket-info__bus-type">Type: {{bus}}</span>
+      <div class="ticket-info__date">{{ ticket.departureDate }}</div>
+      <h2 class="ticket-info__from-destination">
+        From {{ ticket.departurePoint }}
+      </h2>
+      <h3 class="ticket-info__to-destination">
+        To {{ ticket.destinationPoint }}
+      </h3>
+      <span class="station">Station {{ ticket.station }}</span>
+      <span class="ticket-info__time">Time {{ ticket.departureTime }}</span>
+      <span class="ticket-info__bus-type">Type: {{ ticket.bus }}</span>
       <div class="row-select">
         <label for="row">Select row</label>
-        <select class="ticket-info__select" name="row" id="row" v-model="seatRow">
+        <select
+          class="ticket-info__select"
+          name="row"
+          id="row"
+          v-model="seatRow"
+        >
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -22,7 +31,12 @@
       </div>
       <div class="place-select">
         <label for="place">Select place</label>
-        <select class="ticket-info__select" name="place" id="place" v-model="seatColumn">
+        <select
+          class="ticket-info__select"
+          name="place"
+          id="place"
+          v-model="seatColumn"
+        >
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -32,11 +46,10 @@
     </div>
     <div class="ticket-price">
       <h2 class="ticket__logo">Bus Ticket Kz</h2>
-      <span class="ticket__price">{{price}}</span>
+      <span class="ticket__price">{{ ticket.price }}</span>
       <button class="ticket__buy-btn">Buy</button>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -45,27 +58,26 @@ export default {
     ticket: {
       type: Object,
       required: true,
-    }
+    },
   },
   data() {
     return {
-      id: "",
-      departurePoint: "",
-      destinationPoint: "",
-      departureDate: "",
-      departureTime: "",
-      station: "",
-      bus: "",
-      seatRow: "",
-      seatColumn: "",
-      price: "",
-    }
-  }
-}
+      id: '',
+      departurePoint: '',
+      destinationPoint: '',
+      departureDate: '',
+      departureTime: '',
+      station: '',
+      bus: '',
+      seatRow: '',
+      seatColumn: '',
+      price: '',
+    };
+  },
+};
 </script>
 
 <style scoped>
-
 .ticket {
   display: flex;
   gap: 0 20px;
@@ -150,5 +162,4 @@ export default {
   background-color: #038c7f;
   color: white;
 }
-
 </style>

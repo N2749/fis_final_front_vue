@@ -2,7 +2,12 @@
   <div class="wrapper">
     <MyHeader></MyHeader>
     <main>
-      <h3>Tickets from {{ticketProperties.departurePoint}} to {{ticketProperties.destinationPoint}} on date {{ticketProperties.departureDate}}</h3>
+      <h3>
+        Tickets from {{ ticketProperties.departurePoint }} to
+        {{ ticketProperties.destinationPoint }} on date
+        {{ ticketProperties.departureDate }}
+      </h3>
+
       <MyTicketsList :ticket-properties="ticketProperties"></MyTicketsList>
     </main>
     <MyFooter></MyFooter>
@@ -17,18 +22,20 @@ export default {
   components: {
     MyHeader,
     MyFooter,
-    MyTicketsList
+    MyTicketsList,
   },
   data() {
     return {
-      ticketProperties: JSON.parse(localStorage.getItem("ticketProperties")) || {
-        departurePoint: "",
-        destinationPoint: "",
-        departureDate: ""
-      }
+      ticketProperties: JSON.parse(
+        localStorage.getItem('ticketProperties')
+      ) || {
+        departurePoint: '',
+        destinationPoint: '',
+        departureDate: '',
+      },
     };
-  }
-}
+  },
+};
 </script>
 
 <style>
