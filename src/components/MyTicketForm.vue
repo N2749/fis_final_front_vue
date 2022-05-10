@@ -4,44 +4,51 @@
       <div class="ticket-buy-form__destinations">
         <div class="ticket-buy-form__cell">
           <label class="ticket-buy-form__label" for="departure-point"
-          >From</label
+            >From</label
           >
           <select
-              class="ticket-buy-form__select"
-              name="departure-point"
-              id="departure-point"
-              v-model="ticketProperties.departurePoint"
+            class="ticket-buy-form__select"
+            name="departure-point"
+            id="departure-point"
+            v-model="ticketProperties.departurePoint"
           >
             <option value="">Select a location...</option>
-            <option v-for="station in stations" :value="station.name" :key="station.id">
+            <option
+              v-for="station in stations"
+              :value="station.name"
+              :key="station.id"
+            >
               {{ station.name }}
             </option>
           </select>
         </div>
         <div class="ticket-buy-form__cell">
-          <label class="ticket-buy-form__label" for="arrival-point"
-          >To</label
-          >
+          <label class="ticket-buy-form__label" for="arrival-point">To</label>
           <select
-              class="ticket-buy-form__select"
-              name="arrival-point"
-              id="arrival-point"
-              v-model="ticketProperties.destinationPoint"
+            class="ticket-buy-form__select"
+            name="arrival-point"
+            id="arrival-point"
+            v-model="ticketProperties.destinationPoint"
           >
             <option value="">Select a location...</option>
-            <option v-for="station in stations" :value="station.name" :key="station.id">
+            <option
+              v-for="station in stations"
+              :value="station.name"
+              :key="station.id"
+            >
               {{ station.name }}
             </option>
           </select>
         </div>
         <div class="ticket-buy-form__cell">
           <label for="#date" class="ticket-buy-form__label"
-          >departure date</label
+            >departure date</label
           >
-          <input type="date"
-                 class="ticket-buy-form__input"
-                 id="date"
-                 v-model="ticketProperties.departureDate"
+          <input
+            type="date"
+            class="ticket-buy-form__input"
+            id="date"
+            v-model="ticketProperties.departureDate"
           />
         </div>
       </div>
@@ -58,28 +65,27 @@ export default {
     stations: {
       type: Array,
       required: true,
-    }
+    },
   },
   data() {
     return {
       ticketProperties: {
-        departurePoint: "",
-        destinationPoint: "",
-        departureDate: "",
-      }
-    }
+        departurePoint: '',
+        destinationPoint: '',
+        departureDate: '',
+      },
+    };
   },
   methods: {
     createTicketQuery() {
       this.ticketProperties.id = Date.now();
-      this.$emit("createTicketQuery", this.ticketProperties);
-    }
-  }
-}
+      this.$emit('createTicketQuery', this.ticketProperties);
+    },
+  },
+};
 </script>
 
 <style>
-
 .ticket-buy-form {
   background-color: white;
   border-radius: 10px;

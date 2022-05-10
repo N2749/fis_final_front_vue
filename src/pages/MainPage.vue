@@ -15,6 +15,7 @@
       </section>
       <MyFeatures></MyFeatures>
       <my-buses-type></my-buses-type>
+      <MyPopularAreas></MyPopularAreas>
     </main>
     <MyFooter></MyFooter>
   </div>
@@ -27,6 +28,7 @@ import MyTicketForm from '/src/components/MyTicketForm.vue';
 import MyTicketsList from '/src/components/MyTicketsList.vue';
 import MyFeatures from '/src/components/MyFeatures.vue';
 import MyBusesType from '/src/components/my-buses-type.vue';
+import MyPopularAreas from '/src/components/MyPopularAreas.vue';
 export default {
   components: {
     MyHeader,
@@ -35,6 +37,7 @@ export default {
     MyTicketsList,
     MyFeatures,
     MyBusesType,
+    MyPopularAreas,
   },
   data() {
     return {
